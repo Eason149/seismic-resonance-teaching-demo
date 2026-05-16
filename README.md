@@ -68,10 +68,6 @@ seismic_building_demo/
 ├── main.py
 ├── requirements.txt
 ├── README.md
-├── outputs/
-│   ├── figures/
-│   ├── animations/
-│   └── audio/
 └── src/
     ├── __init__.py
     ├── signal_generation.py
