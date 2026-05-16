@@ -110,6 +110,7 @@ Audio:
 - `outputs/audio/seismic_input.wav`
 - `outputs/audio/building_response_resonance.wav`
 - `outputs/audio/building_response_damped.wav`
+
 中文解释：
 - `01_seismic_input_waveform.png`：模拟地震加速度输入 \(a_g(t)\) 的时域波形，展示“前弱-中强-后衰减”的震动过程。
 - `02_seismic_frequency_spectrum.png`：输入信号的 FFT 频谱图（0-10 Hz），黑色标记点是主频，说明地震不仅有幅值还有频率结构。
