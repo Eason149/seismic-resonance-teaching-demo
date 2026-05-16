@@ -33,9 +33,7 @@ where
 Transfer function:
 
 $$
-H(s)=\frac{X(s)}{A_g(s)}
-=
-\frac{-1}{s^2+2\zeta\omega_n s+\omega_n^2}
+H(s)=\frac{X(s)}{A_g(s)}=\frac{-1}{s^2+2\zeta\omega_n s+\omega_n^2}
 $$
 
 Frequency response:
