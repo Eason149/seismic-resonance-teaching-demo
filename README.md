@@ -12,41 +12,55 @@ Python classroom presentation project for **Signals and Systems**:
 - System behavior is analyzed through **differential equation**, **convolution/system response**, **Fourier transform**, **frequency response**, **resonance**, and **damping**.
 
 ## Mathematical Model
+
 We model the building as a single-degree-of-freedom second-order system:
 
-\[
-m x''(t) + c x'(t) + k x(t) = -m a_g(t)
-\]
+$$
+m\ddot{x}(t)+c\dot{x}(t)+kx(t)=-m a_g(t)
+$$
 
 Normalize by \(m\):
 
-\[
-x''(t) + 2 \zeta \omega_n x'(t) + \omega_n^2 x(t) = -a_g(t)
-\]
+$$
+\ddot{x}(t)+2\zeta\omega_n\dot{x}(t)+\omega_n^2x(t)=-a_g(t)
+$$
 
 where
-- \(\omega_n = \sqrt{k/m}\) is natural angular frequency,
-- \(\zeta = c/(2\sqrt{km})\) is damping ratio.
 
-Transfer function (input \(A_g(s)\), output \(X(s)\)):
+- $\omega_n=\sqrt{\frac{k}{m}}$ is the natural angular frequency.
+- $\zeta=\frac{c}{2\sqrt{km}}$ is the damping ratio.
 
-\[
-H(s)=\frac{X(s)}{A_g(s)}=-\frac{1}{s^2+2\zeta\omega_n s+\omega_n^2}
-\]
+Transfer function:
+
+$$
+H(s)=\frac{X(s)}{A_g(s)}
+=
+\frac{-1}{s^2+2\zeta\omega_n s+\omega_n^2}
+$$
 
 Frequency response:
 
-\[
-H(j\omega)=-\frac{1}{(\omega_n^2-\omega^2)+j2\zeta\omega_n\omega}
-\]
+$$
+H(j\omega)=
+\frac{-1}{(\omega_n^2-\omega^2)+j2\zeta\omega_n\omega}
+$$
 
-\[
-|H(j\omega)|=\frac{1}{\sqrt{(\omega_n^2-\omega^2)^2+(2\zeta\omega_n\omega)^2}}
-\]
+Magnitude response:
+
+$$
+|H(j\omega)|=
+\frac{1}{
+\sqrt{
+(\omega_n^2-\omega^2)^2+
+(2\zeta\omega_n\omega)^2
+}
+}
+$$
 
 Interpretation:
-- Input spectrum overlapping system natural frequency causes large output (**resonance**).
-- Larger \(\zeta\) reduces vibration amplitude and ringing duration.
+
+- When the input spectrum overlaps the system natural frequency, the output becomes large. This is resonance.
+- A larger $\zeta$ reduces vibration amplitude and ringing duration.
 
 ## Project Structure
 ```text
